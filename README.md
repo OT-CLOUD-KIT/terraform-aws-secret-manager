@@ -1,7 +1,8 @@
 AWS Secret Manager Terraform module
 ======================================
 
-Terraform module which creates EC2 Instance on AWS.
+Terraform module which creates Secret Manager Secrets on AWS.
+
 These types of resources are supported:
 
 Secret Manager
