@@ -42,50 +42,47 @@ Example
 $ terraform plan
 ``
 
-```
 var.secret_description
   Description for secret manager
 
-  Enter a value: Description for secret manager
+  Enter a value: [- Description for secret manager -]
 
 var.secret_name
   Name of secret manager
 
-  Enter a value: opstree_secret
+  Enter a value: [- opstree_secret -]
 
 var.secret_string
   key-value input for secret manager
 
-  Enter a value: { "key1": "value1", "key2": "value2" }
+  Enter a value: [- { "key1": "value1", "key2": "value2" } -]
 
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
 persisted to local or remote state storage.
-```
 
 
 ``
 $ terraform apply
 ``
 
-```
 var.secret_description
   Description for secret manager
 
-  Enter a value: Desciption for secret manager
+  Enter a value: [- Desciption for secret manager -]
 
 var.secret_name
   Name of secret manager
 
-  Enter a value: opstree_secret
+  Enter a value: [- opstree_secret -]
 
 var.secret_string
   key-value input for secret manager
 
-  Enter a value: { "key1": "value1", "key2": "value2" }
+  Enter a value: [- { "key1": "value1", "key2": "value2" } -]
 
 
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
   + create
-```
+
