@@ -26,7 +26,7 @@ Inputs
 | secretname | Name of secret manager | `string` | `"false"` | yes |
 |secretdescription|Description for secret manager|`string`|`"false"`|no|
 |tags|Additional tags|`string`|`"false"`|no|
-|secret_string|key-value pair in JSON format|`string`|`"true"`|yes|
+|secret_string|key-value pair in JSON format|`string`|`"false"`|yes|
 
 Output
 ------
