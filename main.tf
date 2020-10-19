@@ -4,8 +4,8 @@ provider "aws" {
 
 
 resource "aws_secretsmanager_secret" "secret" {
-  name = var.secretname
-  description = var.secretdescription
+  name = var.secret_name
+  description = var.secret_description
   tags = merge(
     {
       PROVISIONER = "Terraform",
@@ -15,12 +15,7 @@ resource "aws_secretsmanager_secret" "secret" {
   )
 }
 
-resource "aws_secretsmanager_secret_version" "secret" {
+resource "aws_secretsmanager_secret_version" "secret_version" {
   secret_id = aws_secretsmanager_secret.secret.id
-  secret_string = <<EOF
-  {
-    "key1": "value1",
-    "key2": "value2"
-  }
-  EOF
+  secret_string = jsonencode(var.secret_string)
 }
