@@ -5,7 +5,7 @@ Terraform module which creates Secret Manager Secrets on AWS.
 
 These types of resources are supported:
 
-Secret Manager
+[Secret Manager](https://aws.amazon.com/secrets-manager/)
 
 Terraform versions
 ------------------
