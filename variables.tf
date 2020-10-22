@@ -18,8 +18,4 @@ variable "tags" {
 variable "secret_string" {
   description = "key-value input for secret manager"
   type = map(string)
-#  default = {
-#    "key1": "value1",
-#    "key2": "value2"
-#  }
 }
