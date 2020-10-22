@@ -37,6 +37,7 @@ Output
 
 Usage
 ------- 
+```
 module "secret" {
   source = "../secret-manager/"
   secret_name = "name_of_secret"
@@ -44,3 +45,4 @@ module "secret" {
   tags = {"key1": "value1"}
   secret_string =  { "secretkey1": "secretvalue1", "secretkey2": "secretvalue2"}
   }
+```
