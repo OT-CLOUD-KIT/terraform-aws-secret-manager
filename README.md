@@ -21,12 +21,16 @@ Tags
 
 Inputs
 ------
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|----------|
-| secretname | Name of secret manager | `string` | `"false"` | yes |
-|secretdescription|Description for secret manager|`string`|`"false"`|no|
-|tags|Additional tags|`string`|`"false"`|no|
-|secret_string|key-value pair in JSON format|`string`|`"false"`|yes|
+| Name | Description | Type | Default | Required | Depends-On|
+|------|-------------|------|---------|----------|-----------|
+| secretname | Name of secret manager | `string` || yes ||
+|secretdescription|Description for secret manager|`string`||no||
+|tags|Additional tags|`string`|`{}`|no||
+|secret_string|key-value pair in JSON format|`string`||yes||
+|kms_key_id|Specifies the ARN or Id of the AWS KMS customer master key|`string`||no|`enabled_rotation_secret`|
+|rotation_lambda_arn|Specifies the ARN of the Lambda function that can rotate the secret|`string`||no|`enabled_rotation_secret`|
+|enabled_rotation_secret|To enable/disable secrets rotation|`string`|`"false"`|no||
+
 
 Output
 ------
@@ -44,5 +48,8 @@ module "secret" {
   secret_description = "Description for secret manager"
   tags = {"key1": "value1"}
   secret_string =  { "secretkey1": "secretvalue1", "secretkey2": "secretvalue2"}
+  kms_key_id = "xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxxx"
+  rotation_lambda_arn = "arn:aws:lambda:ap-south-1:xxxxxxxxxxx:function:LAMBDA_FUNC_NAME"
+  enabled_rotation_secret = false
   }
 ```
