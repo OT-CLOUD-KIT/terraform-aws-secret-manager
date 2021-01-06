@@ -34,7 +34,13 @@ variable "rotation_lambda_arn" {
 }
 
 variable "enabled_rotation_secret" {
-    description = "lambda ARN to enable rotation of secret manager"
+    description = "enable/disable to rotate of secret manager keys"
     type = bool
     default = false
+}
+
+variable "automatically_after_days" {
+    description = "number of days between automatic scheduled rotations"
+    type = string
+    default = "30"
 }
