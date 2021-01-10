@@ -53,3 +53,10 @@ module "secret" {
   enabled_rotation_secret = false
   }
 ```
+
+### Contributors
+
+[![bhupender singh][bhupender_avatar]][bhupender_homepage]<br/>[bhupender singh][bhupender_homepage] 
+
+  [bhupender_homepage]: https://github.com/b44rawat
+  [bhupender_avatar]: https://avatars1.githubusercontent.com/u/26429558?s=460&u=26006df9d10be9c1103731c5f89f7d6447fd8887&v=4
