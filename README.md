@@ -7,6 +7,7 @@ A Terraform module to securely create and manage AWS Secrets Manager secrets wit
 
 ## Architecture
 
+![secret](https://github.com/user-attachments/assets/9c8e2738-4da6-4b50-98a1-6b7af67a1399)
 
 
 > - This module supports secrets for:
