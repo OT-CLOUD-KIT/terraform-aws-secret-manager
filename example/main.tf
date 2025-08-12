@@ -20,7 +20,7 @@ module "naming" {
 
 
 module "secret" {
-  source = "../" 
+  source = "git@github.com:OT-CLOUD-KIT/terraform-aws-secret-manager.git?ref=Feature" 
 
   secret_name        = var.secret_name
   secret_description = var.secret_description
