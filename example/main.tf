@@ -1,24 +1,4 @@
 
-module "standard_tags" {
-  source = "git@github.com:OT-CLOUD-KIT/terraform-aws-standard-tagging.git?ref=dev"
-
-  bu      = var.bu
-  program = var.program
-  app     = var.app
-  team    = var.team
-  region  = var.region
-  env     = var.env
-}
-
-module "naming" {
-  source   = "git@github.com:OT-CLOUD-KIT/terraform-aws-naming.git?ref=dev"
-  bu       = var.bu
-  env      = var.env
-  app      = var.app
-  resource = var.resource
-}
-
-
 module "secret" {
   source = "git@github.com:OT-CLOUD-KIT/terraform-aws-secret-manager.git?ref=Feature" 
 
@@ -28,12 +8,10 @@ module "secret" {
   used_for_service   = var.used_for_service
 
   recovery_window_in_days = var.recovery_window_in_days
- bu                         = var.bu
-  program                    = var.program
-  team                       = var.team
-  app                        = var.app
-  env                        = var.env
-  region                     = var.region
+ env = var.env
+ app = var.app
+ owner = var.owner
+
   secret_string = var.secret_string
 
   enabled_rotation_secret  = var.enabled_rotation_secret

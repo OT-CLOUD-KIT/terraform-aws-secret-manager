@@ -20,11 +20,7 @@ rotation_lambda_arn      = null
 automatically_after_days = 30
 
 
-
-bu       = "bp"
-program  = "ot"
-team     = "devops"
-app      = "ot"
-env      = "d"
-region   = "us-east-1"
-resource = "secret"
+env = "dev"
+owner = "opstree"
+region = "us-east-1"
+app = "otcloud-kit"
